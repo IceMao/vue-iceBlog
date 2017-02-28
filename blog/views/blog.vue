@@ -1,115 +1,55 @@
 <style scoped>
-.test {
-    width: 100%;
-    height: 100%;
-    font-family: Times, Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
-    color: #2c3e50;
-    background-color: (255, 255, 255, 0.5);
-    background-size: 100%;
-    min-width:980px;
-}
-
-.del {
-    display: inline-block;
-    float: right;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.del:hover {
-    color: #a5a5a5;
-}
-
-.list {
-    margin-left: 20px;
-    background-color: #eee;
-    min-height: 30px;
-    margin-bottom: 5px;
-    padding: 15px 5px 1px 14px;
-}
-
-.container {
-    width: 670px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.nav {
-    height: 65px;
-    background-color: rgb(155,137,130);
-    width: 100%;
-}
-
-.inp {
-    height: 60px;
-    line-height: 60px;
-    font-size: 2em;
-    margin-left: 15px;
-    margin-right: 26px;
-}
-
-.inText {
-    height: 30px;
-    width: 200px;
-    margin-left: 15px;
-    border: none;
-    box-shadow: 0 0 13px #968c8c;
-    padding-left: 10px;
-    border-radius: 5px;
-    position: absolute;
-    top: 17px;
-    transition: width cubic-bezier(0.75, 0.34, 0.87, 0.65) 0.3s;
-}
-
-.inText:focus {
-    outline: #736a6a auto 1px;
-}
-
-.inText:hover {
-    width: 300px;
-    transition: width ease 0.3s;
-}
-
-i.count {
-    margin-right: 10px;
-    float: right;
-    width: 20px;
-    height: 20px;
-    line-height: 19px;
-    text-align: center;
-    background: #ccc;
-    border-radius: 50%;
-}
-
-p {
-    padding-left: 15px;
-}
-
-.compl {
-    color: #a5a5a5;
-}
+@import './../assets/common/blog.css';
 </style>
 <template>
-    <div class="test">
-        <div class="nav">
-        <span class="inp">ToDoList</span>
-        <div class="container">
-            <input class="inText" type="text" @keyup.13="enterToDo($event)" v-model="write" placeholder="添加toDo">
-        </div></div>
-        <div class="container">
-            <p>正在进行<i class="count">{{count}}</i></p>
-            <div class="list" v-for="(x,index) in list" v-if="x.change == false">
-                <input type="checkbox" @click="checkFn(index)">
-                <span>{{x.name}}</span>
-                <div class="del" @click="del(index)">x</div>
-            </div>
-            <p>已完成<i class="count">{{counted}}</i></p>
-            <div class="list" v-for="(y,index) in list" v-if="y.change == true">
-                <input type="checkbox" checked="y.change" @click="checkFn(index)">
-                <span class="compl">{{y.name}}</span>
-                <div class="del" @click="del(index)">x</div>
-            </div>
+    <div class="blog">
+        <div class="indentIcon">
         </div>
+        <header class="container">
+            <div class="header clearfix">
+                <div class="headPic">
+                    <div class="glassPic"><span></span></div>
+                </div>
+                <div class="logo">
+                    <h1><a class="headermaintitle" id="Header1_HeaderTitle" href="http://www.cnblogs.com/iceMao/">Ice BLOG</a></h1>
+                    <!-- <div id="subtitle">web,js</div> -->
+                </div>
+                <nav>
+                    <div><a id="blog_nav_sitehome" href="http://www.cnblogs.com/">博客园</a></div>
+                    <div><a id="blog_nav_myhome" href="http://www.cnblogs.com/iceMao/">Home</a></div>
+                    <div><a id="blog_nav_newpost" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></div>
+                    <div><a id="blog_nav_contact" accesskey="9" rel="nofollow" href="https://msg.cnblogs.com/send/IceMao">联系</a></div>
+                    <div><a id="blog_nav_rss" href="http://www.cnblogs.com/iceMao/rss">订阅</a></div>
+                    <div><a id="blog_nav_admin" rel="nofollow" href="https://i.cnblogs.com/">管理</a></div>
+                </nav>
+            </div>
+        </header>
+        <!--正文-->
+        <section class="noteList container">
+            <section class="noteItem">
+                <h4><a href="">angular：关于ng-repeat和ng-options</a></h4>
+                <p>posted @ 2016-09-10 09:08 IceMao</p>
+                <p>二者都可用于实现下拉列表，并且度娘上有很多关于两者的内容，此处不再赘述，本文为了说明在最近的项目中遇到的相关问题， 可以写成如下格式 ng repeat ng options 区别： 1. 如上所示，当在select中时ng repeat需要写在option中，而ng options不需要optio</p>
+            </section>
+            <section class="noteItem">
+                <h4><a href="">angular2：关于ng-repeat和ng-options</a></h4>
+                <p>posted @ 2016-09-10 09:08 IceMao</p>
+                <p>二者都可用于实现下拉列表，并且度娘上有很多关于两者的内容，此处不再赘述，本文为了说明在最近的项目中遇到的相关问题， 可以写成如下格式 ng repeat ng options 区别： 1. 如上所示，当在select中时ng repeat需要写在option中，而ng options不需要optio</p>
+            </section>
+            <section class="noteItem">
+                <h4><a href="">angular3：关于ng-repeat和ng-options</a></h4>
+                <p>posted @ 2016-09-10 09:08 IceMao</p>
+                <p>二者都可用于实现下拉列表，并且度娘上有很多关于两者的内容，此处不再赘述，本文为了说明在最近的项目中遇到的相关问题， 可以写成如下格式 ng repeat ng options 区别： 1. 如上所示，当在select中时ng repeat需要写在option中，而ng options不需要optio</p>
+            </section>
+            <section class="noteItem">
+                <h4><a href="">angular4：关于ng-repeat和ng-options</a></h4>
+                <p>posted @ 2016-09-10 09:08 IceMao</p>
+                <p>二者都可用于实现下拉列表，并且度娘上有很多关于两者的内容，此处不再赘述，本文为了说明在最近的项目中遇到的相关问题， 可以写成如下格式 ng repeat ng options 区别： 1. 如上所示，当在select中时ng repeat需要写在option中，而ng options不需要optio</p>
+            </section>
+        </section>
+        <footer>
+            <p class="container">Powered by: ice cream Copyright © IceMao</p>
+        </footer>
     </div>
 </template>
 <script>
@@ -122,9 +62,6 @@ export default {
                     change: null
                 }], //当change为false时 进行时中会多出一个“多余的事件”
                 write: "",
-
-                count: 0,
-                counted: 0,
             }
 
         },
@@ -136,72 +73,18 @@ export default {
         methods: {
             //回车提交事件
             enterToDo: function(ev) {
-                if (this.write === "" || this.write.trim() === "") {
-                    alert("请输入内容…………");
-                } else {
-                    this.list.push({
-                        change: false,
-                        name: this.write
-                    });
-                    this.write = "";
-                    this.count++;
-                }
-            },
-            //选择
-            checkFn: function(index) {
-                console.log(index, "  ", this.list[index].change);
 
-                if (this.list[index].change == false) {
-                    this.list[index].change = true;
-                    this.count--;
-                    this.counted++;
-                } else {
-                    this.list[index].change = false;
-                    this.count++;
-                    this.counted--;
-                }
             },
-            //删除事件
-            del: function(index) {
 
-                if (this.list[index].change == false) {
-                    this.count--;
-                } else {
-                    this.counted--;
-                }
-                this.list.splice(index, 1);
-            },
         },
         created() {
-            var temp = [{
-                "name": "我是事件1",
-                "change": false
-            }, {
-                "name": "我是事件 2",
-                "change": true
-            }, {
-                "name": "我是事件 3",
-                "change": true
-            }, {
-                "name": "我是事件 4",
-                "change": false
-            }, ];
-            this.list = temp;
-            for (var it in this.list) {
-                if (this.list[it].change == true) {
-                    this.count++;
-                } else {
-                    this.counted++;
-                }
-            }
-            // console.info("http:",this.$http.get())
-            // this.$http.get('./../../thing.json').then(response => {
-            //     console.info("res:",response)
-            //     return response;
-            // }).then(blob => {
-            // console.info("resError:",response)
-            // })
+            this.$http.post('http://admin.citywealth.cn/Login/Login', {
+                "LoginName":"6","LoginPwd":"213123"
+            }).then((response)=>{
+                console.info(response);
+            }).catch(function(response){
+                console.warn(response);
+            })
         },
-
 }
 </script>

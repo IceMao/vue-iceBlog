@@ -7,32 +7,23 @@ Vue.use(vueRouter);
 
 //.vue 页面
 // import blog from './views/blog.vue';
-import index from './views/index.vue';
+import blog from './views/blog.vue';
 //公共css
 require('./assets/common/common.css');
 
-const foo = {template:'<div>FOOdfsdfsdf</div>'}
-
-
 //路由
 const routes = [{
-  path:'/',
-  component:foo
-},{
-  path:'/foo',
-  component:index
-}
-// ,{
-//   path:'/blog',
-//   component:blog
-// }
-];
+    path: '/',
+    component: blog
+}, {
+    path: '/foo',
+    component: blog
+}];
 
 const router = new vueRouter({
-  routes
+    routes
 });
 
 const app = new Vue({
-  router
+    router
 }).$mount('#app');
-
