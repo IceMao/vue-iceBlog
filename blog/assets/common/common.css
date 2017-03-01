@@ -27,7 +27,7 @@ a:hover {
 h1 {
     margin: 0;
     padding-top: 5px;
-    font-size: 1.8em;
+    /*font-size: 1.8em;*/
     margin-left: 5px
 }
 
@@ -42,7 +42,7 @@ h1 a:hover {
 
 h2 {
     margin-top: 10px;
-    font-size: 1em
+    /*font-size: 1em*/
 }
 
 h5 {
@@ -82,10 +82,42 @@ body {
 }
 .container {
     width: 60%;
-    min-width: 968px;
+    min-width: 1280px;/*968px;*/
     margin: 0 auto;
 }
 #app {
     height: 100%;
     /*rgb(235,235,235);*/
+}
+
+
+/***********滚动条样式***********/
+
+::-webkit-scrollbar {
+    width: 20px;
+    height: 14px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    border: 5px solid transparent;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    min-height: 20px;
+    background-clip: content-box;
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, .2) inset;
+}
+
+::-webkit-scrollbar-thumb:active {
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, .3) inset;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
 }

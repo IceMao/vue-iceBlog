@@ -28,6 +28,7 @@
     "open-browser-webpack-plugin": "^0.0.2",
     "postcss-loader": "^0.13.0",
     "sass-loader": "^4.0.2",
+    "showdown": "^1.6.4",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "vue-loader": "^9.5.1",
