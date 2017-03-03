@@ -121,3 +121,9 @@ body {
 ::-webkit-scrollbar-corner {
     background: transparent;
 }
+
+
+code{
+    background:#3ea;
+
+}

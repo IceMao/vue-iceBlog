@@ -1,5 +1,5 @@
 <style lang="scss" scoped>
-.article {
+.edit {
     .editArtical {
         textarea,
         .preview {
@@ -31,9 +31,9 @@
 }
 </style>
 <template>
-    <div class="article">
+    <div class="edit">
         <ice-header></ice-header>
-        <div class="main container">
+        <div class="editArtical container">
             <textarea rows="10" name="ArticleContent" id="txt_ArticleContent" @keyup="compile()"></textarea>
             <div class="preview" id="result"></div>
         </div>
