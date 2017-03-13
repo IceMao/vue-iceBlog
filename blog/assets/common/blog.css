@@ -1,6 +1,7 @@
 
 /*note begin*/
 .noteList{
+  text-align: center;
 }
 .noteItem{
     height: 140px;

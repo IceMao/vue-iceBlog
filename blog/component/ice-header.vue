@@ -7,10 +7,10 @@
                 <div class="headPic">
                     <div class="glassPic"><span></span></div>
                 </div>
-                <div class="logo">
+               <!--  <div class="logo">
                     <h1><a class="headermaintitle" id="Header1_HeaderTitle" href="http://www.cnblogs.com/iceMao/">Ice BLOG</a></h1>
-                    <!-- <div id="subtitle">web,js</div> -->
-                </div>
+                    <div id="subtitle">web,js</div>
+                </div> -->
                 <nav>
                     <div><a id="blog_nav_sitehome" href="/#/edit">博客园</a></div>
                     <div><a id="blog_nav_myhome" href="http://www.cnblogs.com/iceMao/">Home</a></div>
@@ -128,23 +128,23 @@ export default {
 /*indentIcon end*/
 /* header begin*/
 .header {
-
-    font-family: fantasy, sans-serif;
-    position: relative;
-    z-index: 20;
     width: 100%;
     padding-top: 60px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 20;
+    font-family: fantasy, sans-serif;
 }
 #header{
     display:none;
     /**sub 图style begin**/
 }
 .headPic {
-    box-sizing: border-box;
-    overflow: hidden;
-    margin-top: 35px;
     min-width: 400px;
     min-height: 350px;
+    margin-top: 35px;
+    box-sizing: border-box;
+    overflow: hidden;
     background: #01ADDD;
     background: linear-gradient(to bottom right, #ED0181, #01ADDD);
     transition: box-shadow 3s;
@@ -187,8 +187,9 @@ export default {
 nav {
     box-sizing: border-box;
     padding: 30px;
-    width: 80%;
-    float: left;
+    width: 464px;
+    // float: left;
+    margin:0 auto;
 }
 
 nav>div {

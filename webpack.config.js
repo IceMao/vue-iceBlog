@@ -94,11 +94,11 @@ module.exports = function() {
         //输出一个独立的css文件
         new ExtractTextPlugin("[name].css"),
         new HtmlWebpackPlugin({
-            title: 'vue2.0-demo', //设置title的名字
+            title: 'ice-blog-哈哈哈', //设置title的名字
             filename: 'index.html', //设置这个html的文件名
             template: path.resolve(tmplPath, 'template.ejs'), //要使用的模块的路径
             inject: 'body', //把模板注入到哪个标签后 'body'
-            // favicon: './images/favico.ico', // 图标，
+            //favicon: './assets/img/cat.ico', // 图标，
             chunks: ['common', 'index'], //限定引入文件
             minify: false, //生成的html文件压缩
             hash: true, //是否hash

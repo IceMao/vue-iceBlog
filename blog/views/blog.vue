@@ -1,10 +1,62 @@
 <style scoped>
 @import './../assets/common/blog.css';
+/*input[type="checkbox"] + label:before {
+    content: "\a0";
+    display: inline-block;
+    vertical-align: .2em;
+    width: .8em;
+    height: .8em;
+    margin-right: .2em;
+    border-radius: .2em;
+    background: silver;
+    text-indent: .15em;
+    line-height: .65;
+}*/
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    padding:.3em .5em;
+    background: #ccc;
+    background-image:linear-gradient(#ddd, #bbb);
+    border:1px solid rgba(0,0,0,0.2);
+    border-radius: .3em;
+    box-shadow: 0 1px white inset;
+    text-align: center;
+    text-shadow:0 1px 1px #fff;
+
+}
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:active + label {
+ box-shadow: .05em .1em .2em rgba(0,0,0,.6) inset;
+ border-color: rgba(0,0,0,.3);
+ background: #bbb;
+}
+
+input[type="checkbox"]:checked + label:before {
+    content: '\2713';
+    background: yellowgreen;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+input[type="checkbox"]:focus + label::before {
+    box-shadow: 0 0 .1em .1em #3ae;
+}
+
+input[type="checkbox"]:disabled + label::before {
+    background: gray;
+    box-shadow: none;
+    color: #555;
+}
 </style>
 <template>
     <div class="blog">
         <ice-header></ice-header>
-
+        <!-- <input type="checkbox" id="aw" disabled>
+        <label for="aw">Awesome!</label> -->
         <!--正文-->
         <section class="noteList container">
             <section class="noteItem" v-for="item in artList">
@@ -55,17 +107,17 @@ export default {
 
             }).then((response) => {
                 this.artList = response.data.Data;
-                console.info("1 ",response.data.Data);
+                console.info("1 ", response.data.Data);
             }).catch(function(response) {
-                console.warn("09 ",response);
+                console.warn("09 ", response);
             })
             this.$http.get('http://www.asiacream.cn:8001/api/Article/CGetList', {
 
             }).then((response) => {
                 // this.artList = response.data.Data;
-                console.info("1C ",response.data.Data);
+                console.info("1C ", response.data.Data);
             }).catch(function(response) {
-                console.warn("09C ",response);
+                console.warn("09C ", response);
             })
         },
 }

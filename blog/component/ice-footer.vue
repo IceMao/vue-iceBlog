@@ -34,7 +34,7 @@ footer {
     height: 150px;
     line-height: 150px;
     margin-top: 100px!important;
-    text-align: right;
+    text-align: center;
     background-color: #2a2a2b;
     color: #00BCD4;
 }
