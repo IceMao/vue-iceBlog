@@ -10,7 +10,7 @@ var ENV = process.env.npm_lifecycle_event;
 var dev = ENV === "dev"
 var publish = ENV === "publish-mac" || ENV === "publish-win"
 
-var port = 8089;
+var port = 8066;
 
 var projectRoot = path.resolve(__dirname);
 var appPath = path.resolve(__dirname, './blog/');
@@ -133,7 +133,7 @@ module.exports = function() {
     config.devServer = {
       hot: true,
       inline: true,
-      port:8089,
+      port:8066,
       // proxy: {
       //   '/api/*': {
       //     target: 'http://api.example.com', // target host

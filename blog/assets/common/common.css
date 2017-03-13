@@ -49,10 +49,12 @@ h5 {
     margin: 0;
     padding: 0
 }
-h4{
-      font-size: 29px;
+
+h4 {
+    font-size: 29px;
     font-weight: normal;
 }
+
 html {
     width: 100%;
     display: table;
@@ -62,15 +64,17 @@ body,
 html {
     height: 100%;
 }
+
 body {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-size: 16px;
     color: #a5a5a5;
-    background-color: #fff;
+    background: #fff;
     font-family: Times, Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
 }
+
 .clearfix {
     zoom: 1;
 }
@@ -80,14 +84,24 @@ body {
     display: table;
     clear: both;
 }
-.container {
-    width: 60%;
-    min-width: 1280px;/*968px;*/
-    margin: 0 auto;
-}
+
 #app {
     height: 100%;
     /*rgb(235,235,235);*/
+}
+
+.container {
+    width: 60%;
+    min-width: 1280px;
+    margin: 0 auto;
+}
+
+@media (max-width:1366px) {
+    .container {
+        width: 60%;
+        min-width: 968px;
+        margin: 0 auto;
+    }
 }
 
 
@@ -122,8 +136,6 @@ body {
     background: transparent;
 }
 
-
-code{
-    background:#3ea;
-
+code {
+    background: #3ea;
 }

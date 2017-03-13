@@ -1,5 +1,5 @@
 <style lang="scss" scoped>
-.article {
+.edit {
     .editArtical {
         textarea,
         .preview {
@@ -31,13 +31,9 @@
 }
 </style>
 <template>
-    <div class="article">
+    <div class="edit">
         <ice-header></ice-header>
-        <div class="main container">
-        <h3>{{post.Title}}</h3>
-            <textarea rows="10" name="ArticleContent" id="txt_ArticleContent" @keyup="compile()">{{post.ArticleContent}}</textarea>
-            <div class="preview" id="result"></div>
-        </div>
+        找不到
         <ice-footer></ice-footer>
     </div>
 </template>
@@ -47,7 +43,7 @@ import iceFooter from '../component/ice-footer.vue';
 export default {
     data() {
             return {
-                post: 'Welcome to Your Vue.js App',
+                msg: 'Welcome to Your Vue.js App',
                 list: [{
                     name: "",
                     change: null
@@ -83,15 +79,7 @@ export default {
 
         },
         created() {
-            var id = this.$route.params.id;
-            this.$http.get('http://www.asiacream.cn:8001/api/Article/GetEntityByArticleID?ArticleID='+id, {}).then((response) => {
-                this.post = response.data.Data;
-            }).catch(function(response) {
-            })
-            this.$http.get('http://www.asiacream.cn:8001/api/Article/TGetListByArticleID?ArticleID=1', {}).then((response) => {
 
-            }).catch(function(response) {
-            })
         },
 }
 </script>

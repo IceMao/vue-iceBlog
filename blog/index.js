@@ -3,10 +3,6 @@ import vueResource from 'vue-resource';
 import vueRouter from 'vue-router';
 import showdown from 'showdown';
 
-var converter = new showdown.Converter(),
-  text = "#hello,word#",
-  html=converter.makeHtml(text);
-console.info("html",html);
 Vue.use(vueResource);
 Vue.use(vueRouter);
 
@@ -17,7 +13,7 @@ import edit from './views/edit.vue';
 //公共css
 require('./assets/common/common.css');
 //js
-// require('./assets/js/showdown.js');
+require('./assets/js/showdown.js');
 //路由
 const routes = [{
     path: '/',
@@ -26,14 +22,17 @@ const routes = [{
     path: '/edit',
     component: edit
 }, {
-    path: '/article',
+    path: '/article/:id',
     component: article
 }];
 
 const router = new vueRouter({
+  // hashbang: false,
+  // mode: 'history',
     routes
 });
 
 const app = new Vue({
-    router
+
+    router,
 }).$mount('#app');

@@ -12,7 +12,7 @@
                     <!-- <div id="subtitle">web,js</div> -->
                 </div>
                 <nav>
-                    <div><a id="blog_nav_sitehome" href="http://www.cnblogs.com/">博客园</a></div>
+                    <div><a id="blog_nav_sitehome" href="/#/edit">博客园</a></div>
                     <div><a id="blog_nav_myhome" href="http://www.cnblogs.com/iceMao/">Home</a></div>
                     <div><a id="blog_nav_newpost" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></div>
                     <div><a id="blog_nav_contact" accesskey="9" rel="nofollow" href="https://msg.cnblogs.com/send/IceMao">联系</a></div>
