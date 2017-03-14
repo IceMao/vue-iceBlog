@@ -34,7 +34,7 @@
     <div class="article">
         <ice-header></ice-header>
         <div class="main container">
-        <h3>{{post.Title}}</h3>
+        <h3><a :href="'/#/edit/'+post.ArticleID">{{post.Title}}</a></h3>
             <textarea rows="10" name="ArticleContent" id="txt_ArticleContent" @keyup="compile()">{{post.ArticleContent}}</textarea>
             <div class="preview" id="result"></div>
         </div>
@@ -77,7 +77,6 @@ export default {
                  **更多地请看https://github.com/showdownjs/showdown文档
                  **/
                 var html = converter.makeHtml(text);
-                console.info("make", html);
                 document.getElementById("result").innerHTML = html;
             },
 

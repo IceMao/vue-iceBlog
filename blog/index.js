@@ -19,7 +19,7 @@ const routes = [{
     path: '/',
     component: blog
 }, {
-    path: '/edit',
+    path: '/edit/:id',
     component: edit
 }, {
     path: '/article/:id',

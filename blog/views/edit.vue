@@ -33,9 +33,14 @@
 <template>
     <div class="edit">
         <ice-header></ice-header>
-        <div class="editArtical container">
-            <textarea rows="10" name="ArticleContent" id="txt_ArticleContent" @keyup="compile()"></textarea>
-            <div class="preview" id="result"></div>
+        <div class="container">
+            <input type="text" placeholder="title" v-model="post.Title">
+            <input type="text" placeholder="type" v-model="post.CategoryName">
+            <div class="editArtical">
+                <textarea rows="10" name="ArticleContent" id="txt_ArticleContent" @keyup="compile()">{{post.ArticleContent}}</textarea>
+                <div class="preview" id="result"></div>
+            </div>
+            <button @click="submit()">提交</button>
         </div>
         <ice-footer></ice-footer>
     </div>
@@ -62,6 +67,15 @@ export default {
         },
         //方法
         methods: {
+            submit: function(){
+                this.$http.get('http://www.asiacream.cn:8001/api/Article/Update', {
+                    Title:post.Title,
+                    CategoryName:post.CategoryName,
+                    ArticleContent:post.ArticleContent
+                }).then((response) => {
+                alert("success");
+            }).catch(function(response) {})
+            },
             compile: function() {
                 var text = document.getElementById("txt_ArticleContent").value;
                 var converter = new showdown.Converter();
@@ -82,7 +96,10 @@ export default {
 
         },
         created() {
-
+            var id = this.$route.params.id;
+            this.$http.get('http://www.asiacream.cn:8001/api/Article/GetEntityByArticleID?ArticleID=' + id, {}).then((response) => {
+                this.post = response.data.Data;
+            }).catch(function(response) {})
         },
 }
 </script>
