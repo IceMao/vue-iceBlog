@@ -59,7 +59,7 @@ input[type="checkbox"]:disabled + label::before {
         <label for="aw">Awesome!</label> -->
         <!--正文-->
         <section class="noteList container">
-            <section class="noteItem" v-for="item in artList">
+            <section class="noteItem" :for="item in artList">
                 <h4><a :href="'/#/article/'+item.ArticleID">{{item.Title}}</a></h4>
                 <p>posted @ {{item.UpdateTime}} IceMao</p>
                 <p>{{item.ArticleContent}}</p>
